@@ -1,7 +1,7 @@
 name: Scheduled Demo
 on:
   schedule:
-    - cron: "0 6 * * *"   # every day at 06:00 UTC
+    - cron: "20 5 * * *"   # every day at 05:20 UTC
   workflow_dispatch:
 permissions:
   contents: read
