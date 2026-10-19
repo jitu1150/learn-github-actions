@@ -1,7 +1,7 @@
 name: Scheduled Demo
 on:
   schedule:
-    - cron: "0 6 * * *"   # every day at 06:00 UTC
+    - cron: "20 5 * * *"   # every day at 05:20 UTC
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,8 +12,8 @@ jobs:
       GREETING: ${{ vars.GREETING }}
       MY_SECRET: ${{ secrets.MY_SECRET }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: python show_env.py
